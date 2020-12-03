@@ -6,23 +6,24 @@
 
 Но доставка есть не везде, если указанной страны нет в списке, то выводи в alert сообщение 'В вашей стране доставка не доступна'.
 
-Ниже приведен список стран и стоимость доставки.
+Ниже приведен список стран и стоимость доставки.*/
 
-Китай - 100 кредитов
-Чили - 250 кредитов
-Австралия - 170 кредитов
-Индия - 80 кредитов
-Ямайка - 120 кредитов*/
+const CHINA = "китай";
+const CHILIE = "чили";
+const AUSTRALIA = "австралия";
+const INDIA = "индия";
+const JAMAICA = "ямайка";
 
-let cost = 0;
-let normalizedDestination = prompt("Введите страну доставки");
-
-if (normalizedDestination === null) {
-  console.log("Отмененно пользователем");
+let cost;
+let country = prompt("Введите страну доставки");
+let message;
+if (country === null) {
+  message = "Отмененно пользователем !";
+} else {
+  country = country.toLowerCase();
+  console.log(country);
 }
 
-let country = normalizedDestination(0).toUpperCase() + Destination.slice(1, 9).toLowerCase();
-let message = `Доставка в ${country} будет стоить ${cost} кредитов`;
 switch (country) {
   case "":
     alert("Ошибка! Ничего не введено!");
@@ -30,30 +31,40 @@ switch (country) {
 
   case "Китай":
     cost = 100;
+    country = "Китай";
+    alert = `Доставка на ${country} будет стоить ${cost} кредитов`;
     break;
 
-  case "chili":
+  case "чили":
     cost = 250;
+    country = "чили";
+    alert = `Доставка на ${country} будет стоить ${cost} кредитов`;
     break;
 
   case "Австралия":
     cost = 170;
-    country = country.slice(0, 8) + "ю";
+    country = "Австралия";
+    alert = `Доставка на ${country} будет стоить ${cost} кредитов`;
+
     break;
 
   case "Индия":
     cost = 80;
-    country = country.slice(0, 4) + "ю";
+    country = "Индия";
+    alert = `Доставка на ${country} будет стоить ${cost} кредитов`;
+
     break;
 
   case "Ямайка":
     cost = 120;
-    country = country.slice(0, 5) + "у";
-    message = `Доставка на ${country} будет стоить ${cost} кредитов`;
+    country = "Ямайка";
+    alert = `Доставка на ${country} будет стоить ${cost} кредитов`;
     break;
 
   default:
     alert("В вашей стране доставка не доступна");
 }
-
-console.log(message);
+/*if (cost !== undefined) {
+  message = `Доставка на ${country} будет стоить ${cost} кредитов`;
+}
+console.log(message);*/
