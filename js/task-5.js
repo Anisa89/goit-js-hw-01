@@ -15,13 +15,13 @@
 Ямайка - 120 кредитов*/
 
 let cost = 0;
-let destination = prompt("Введите страну доставки");
+let normalizedDestination = prompt("Введите страну доставки");
 
-if (destination === null) {
+if (normalizedDestination === null) {
   console.log("Отмененно пользователем");
 }
 
-let country = destination(0).toUpperCase() + destination.slice(1, 9).toLowerCase();
+let country = normalizedDestination(0).toUpperCase() + Destination.slice(1, 9).toLowerCase();
 let message = `Доставка в ${country} будет стоить ${cost} кредитов`;
 switch (country) {
   case "":

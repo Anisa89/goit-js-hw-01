@@ -1,4 +1,4 @@
-let total = 0;
+/*let total = 0;
 
 while (true) {
   let input = prompt("Введите число:");
@@ -17,4 +17,4 @@ while (true) {
   total += input;
 }
 
-alert(`Общая сумма: ${total}`);
+alert(`Общая сумма: ${total}`);*/
